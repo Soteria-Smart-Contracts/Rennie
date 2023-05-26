@@ -27,8 +27,7 @@ function addCoinContainer(name, ticker, marketCap, price) {
     } else {
       return marketCap;
     }
-  }
-  
+  }  
 
 function ShowCoins(Setting){
     if(Setting){
