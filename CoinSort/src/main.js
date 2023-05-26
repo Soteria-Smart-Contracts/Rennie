@@ -1,5 +1,6 @@
 let Coins = document.getElementById('Coins');
 let Opener = document.getElementById('Opener');
+let App = document.getElementById('App');
 ShowCoins(false);
 
 function AddCoin(name, ticker, marketCap, price) {
