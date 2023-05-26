@@ -1,4 +1,3 @@
-let Coins = document.getElementById('Coins');
 let Opener = document.getElementById('Opener');
 let App = document.getElementById('App');
 ShowCoins(false);
@@ -36,6 +35,5 @@ function ShowCoins(Setting){
     }
     else{
         Opener.style.display = 'none';
-        Coins.style.display = '';
     }
 }
