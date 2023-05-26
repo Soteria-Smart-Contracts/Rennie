@@ -19,15 +19,15 @@ function addCoinContainer(name, ticker, marketCap, price) {
   
   // Format the market cap value
   function formatMarketCap(marketCap) {
-    const num = parseInt(marketCap.replace(/\D/g, ""));
-    if (num >= 1000000000) {
-      return (num / 1000000000).toFixed(2) + "B";
-    } else if (num >= 1000000) {
-      return (num / 1000000).toFixed(2) + "M";
+    const marketCapValue = Number(marketCap);
+    if (marketCapValue >= 1000000000) {
+      return (marketCapValue / 1000000000).toFixed(2) + "B";
+    } else if (marketCapValue >= 1000000) {
+      return (marketCapValue / 1000000).toFixed(2) + "M";
     } else {
-      return marketCap;
+      return marketCapValue.toString();
     }
-  }  
+  }
 
 function ShowCoins(Setting){
     if(Setting){
