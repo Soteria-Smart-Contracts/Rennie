@@ -32,6 +32,7 @@ function AddCoin(name, ticker, marketCap, price) {
 function ShowCoins(Setting){
     if(Setting){
         App.style.display = '';
+        Opener.style.display = 'none';
     }
     else{
         Opener.style.display = '';
