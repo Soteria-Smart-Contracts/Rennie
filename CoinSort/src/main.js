@@ -1,6 +1,6 @@
 let Opener = document.getElementById('Opener');
 let App = document.getElementById('App');
-ShowCoins(false);
+ShowCoins(true);
 
 function AddCoin(name, ticker, marketCap, price) {
     const btcContainer = document.getElementById("BTC");
@@ -32,18 +32,27 @@ function AddCoin(name, ticker, marketCap, price) {
   function ShowCoins(Setting) {
     const duration = 1000; // Transition duration in milliseconds
   
-    App.style.opacity = Setting ? '0' : '1';
-    App.style.visibility = Setting ? 'hidden' : 'visible';
-    Opener.style.opacity = Setting ? '1' : '0';
-    Opener.style.visibility = Setting ? 'visible' : 'hidden';
+    if (Setting) {
+      Opener.style.opacity = '0';
+      Opener.style.visibility = 'hidden';
   
-    setTimeout(function() {
-      App.style.display = Setting ? 'none' : '';
-      Opener.style.display = Setting ? '' : 'none';
-      App.style.transition = Opener.style.transition = '';
-      App.offsetHeight; // Trigger reflow to ensure transition starts
-      App.style.transition = Opener.style.transition = `opacity ${duration}ms, visibility ${duration}ms`;
-      App.style.opacity = Setting ? '1' : '0';
-      Opener.style.opacity = Setting ? '0' : '1';
-    }, 0);
+      App.style.display = '';
+      App.style.opacity = '0';
+      App.style.visibility = 'visible';
+  
+      setTimeout(function() {
+        App.style.opacity = '1';
+      }, 0);
+    } else {
+      App.style.opacity = '0';
+      App.style.visibility = 'hidden';
+  
+      Opener.style.display = '';
+      Opener.style.opacity = '1';
+      Opener.style.visibility = 'visible';
+  
+      setTimeout(function() {
+        App.style.display = 'none';
+      }, duration);
+    }
   }
