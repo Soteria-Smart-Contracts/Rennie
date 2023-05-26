@@ -34,7 +34,7 @@ function ShowCoins(Setting){
         Coins.style.display = '';
     }
     else{
-        Opener.s
+        Opener.style.display = 'none';
         Coins.style.display = 'none';
     }
 }
