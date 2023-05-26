@@ -1,6 +1,6 @@
 let Coins = document.getElementById('Coins');
 
-function addCoinContainer(name, ticker, marketCap, price) {
+function AddCoin(name, ticker, marketCap, price) {
     // Clone the Bitcoin container
     const btcContainer = document.getElementById("BTC");
     const newContainer = btcContainer.cloneNode(true);
