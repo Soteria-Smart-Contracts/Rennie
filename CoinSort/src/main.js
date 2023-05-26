@@ -29,13 +29,17 @@ function AddCoin(name, ticker, marketCap, price) {
     }
   }
 
-function ShowCoins(Setting){
-    if(Setting){
-        App.style.display = '';
-        Opener.style.display = 'none';
-    }
-    else{
-        Opener.style.display = '';
-        App.style.display = 'none';
-    }
-}
+  function ShowCoins(Setting) {
+    const duration = 1000; // Transition duration in milliseconds
+  
+    App.style.transition = Opener.style.transition = `opacity ${duration}ms, visibility ${duration}ms`;
+    App.style.opacity = Setting ? '1' : '0';
+    App.style.visibility = Setting ? 'visible' : 'hidden';
+    Opener.style.opacity = Setting ? '0' : '1';
+    Opener.style.visibility = Setting ? 'hidden' : 'visible';
+  
+    setTimeout(function() {
+      App.style.display = Setting ? '' : 'none';
+      Opener.style.display = Setting ? 'none' : '';
+    }, duration);
+  }
