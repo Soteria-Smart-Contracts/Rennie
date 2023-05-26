@@ -1,3 +1,5 @@
 
 
-function ShowCoins()
+function ShowCoins(Setting){
+    if(Setting)
+}
