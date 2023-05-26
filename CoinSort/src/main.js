@@ -1,5 +1,7 @@
-let Coins = document.getElementById
+let Coins = document.getElementById('Coins');
 
 function ShowCoins(Setting){
-    if(Setting)
+    if(Setting){
+        
+    }
 }
