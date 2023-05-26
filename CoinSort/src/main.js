@@ -1,5 +1,5 @@
 let Coins = document.getElementById('Coins');
-let HeaderText = d
+let HeaderText = document.getElementById('Coins')
 ShowCoins(false);
 
 function AddCoin(name, ticker, marketCap, price) {
