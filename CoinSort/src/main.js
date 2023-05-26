@@ -1,6 +1,6 @@
 let Coins = document.getElementById('Coins');
 let HeaderText = document.getElementById('HeadText')
-ShowCoins(false);
+ShowCoins(true);
 
 function AddCoin(name, ticker, marketCap, price) {
     const btcContainer = document.getElementById("BTC");
